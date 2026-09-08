@@ -180,13 +180,13 @@ Grafik ini saya tampilkan hanya untuk menunjukkan bahwa pipeline-nya berjalan sa
 
 ### Temuan
 
-**1. CLIP zero-shot belum bisa dipakai langsung.** Untuk silhouette, akurasinya di bawah baseline. Untuk length, hanya sedikit di atas. Sehingga labelnya belum layak dijadikan dasar analisis tren.
+**1. CLIP zero-shot belum bisa langsung dipakai.** Untuk siluet akurasinya malah di bawah baseline, dan untuk panjang cuma sedikit di atas. Jadi labelnya belum layak dijadikan dasar analisis tren.
 
-**2. Kategori yang posisinya di tengah tidak pernah menang.** Ini terjadi di kedua atribut: `straight` (di antara fitted dan oversized) dan `midi` (di antara mini dan maxi). Penyebabnya terlihat dari analisis selisih skor di Bagian 5.3, ruang keputusannya terlalu sempit.
+**2. Kategori yang posisinya di tengah seperti straight dan midi tidak pernah menang.** 
 
-**3. Prompt ensemble terbukti membantu.** Naik di kedua atribut, dan biaya komputasinya hampir tidak ada.
+**3. Prompt ensemble ternyata membantu.** Akurasinya naik di dua atribut.
 
-**4. Tahap validasi ternyata penting sekali.** Ini yang paling saya rasakan. Tanpa membandingkan dengan anotasi manual, label dari CLIP tetap bisa dibuat grafik tren yang kelihatan rapi dan masuk akal — padahal akurasinya di bawah tebakan. Kalau saya langsung lanjut ke analisis tren, saya tidak akan pernah tahu.
+**4.Pentingnya tahap validasi.** Grafik tren tetap bisa dibuat dari label CLIP, dan hasilnya kelihatan rapi seperti tidak ada yang salah. Padahal setelah dicompare dengan anotasi manual, akurasi labelnya di bawah asal tebak. Kalau saya tidak dicek dan langsung lanjut ke analisis tren, saya tidak akan tahu ada yang salah.
 
 ### Keterbatasan
 
@@ -214,13 +214,13 @@ Meskipun demikian, tiga kesimpulan utama tetap berlaku:
 
 | Periode | Kegiatan | Deliverable |
 |---|---|---|
-| Minggu 4 September | Literature Study (Fashionpedia, penelitian analisis tren fashion) menyusun taksonomi lengkap | Dokumen taksonomi dan prompt |
-| Minggu 1-2 Oktober | Preprocessing gambar: deteksi figur manusia, cropping, filter gambar nonrunway | Pipeline preprocessing |
-| Minggu 3-4 Oktober | Menghitung ulang embedding dari gambar ter-crop; membandingkan dengan embedding bawaan | Tabel perbandingan akurasi |
-| Minggu 1-2 November | Menyusun pedoman anotasi lengkap; perluasan ground truth menjadi 300–500 gambar dengan dua anotator | Dataset ground truth dan nilai Cohen's kappa |
-| Minggu 3 November | Perbandingan model (ViT-B/32, ViT-L/14, SigLIP) dan konfigurasi prompt | Tabel perbandingan |
-| Minggu 4 November | Penyusunan proposal | Draf proposal |
-| Minggu 1 Desember | Revisi draf proposal | Proposal |
+| Week 4 September | Literature Study (Fashionpedia, penelitian analisis tren fashion) menyusun taksonomi lengkap | Dokumen taksonomi dan prompt |
+| Week 1-2 Oktober | Preprocessing gambar: deteksi figur manusia, cropping, filter gambar nonrunway | Pipeline preprocessing |
+| Week 3-4 Oktober | Menghitung ulang embedding dari gambar ter-crop, membandingkan dengan embedding bawaan | Tabel perbandingan akurasi |
+| Week 1-2 November | Menyusun pedoman anotasi lengkap, perluasan ground truth menjadi 300–500 gambar dengan dua anotator | Dataset ground truth dan nilai Cohen's kappa |
+| Week 3 November | Perbandingan model (ViT-B/32, ViT-L/14, SigLIP) dan konfigurasi prompt | Tabel perbandingan |
+| Week 4 November | Penyusunan proposal | Draf proposal |
+| Week 1 Desember | Revisi draf proposal | Proposal |
 
 Selain itu, ada beberapa hal yang saya temukan selama studi ini dan sepertinya bisa dimanfaatkan:
 
