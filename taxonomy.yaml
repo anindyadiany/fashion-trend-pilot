@@ -1,0 +1,28 @@
+
+silhouette:
+  oversized: ["a runway look with an oversized silhouette",
+              "a model wearing loose, oversized clothing",
+              "an outfit with a baggy, voluminous fit"]
+  fitted:    ["a runway look with a fitted silhouette",
+              "a model wearing tight, body-hugging clothing",
+              "a close-fitting tailored outfit"]
+  a_line:    ["an A-line silhouette that flares toward the hem",
+              "a garment narrow at the top and wide at the bottom",
+              "an A-line dress or skirt"]
+  straight:  ["a straight, column-shaped silhouette",
+              "an outfit with a straight vertical cut",
+              "a simple straight-cut garment"]
+
+length:
+  mini:     ["a mini-length garment above the knee",
+             "a very short hemline",
+             "a short mini dress or skirt"]
+  midi:     ["a midi-length garment between knee and ankle",
+             "a mid-calf hemline",
+             "a midi dress or skirt"]
+  maxi:     ["a maxi-length garment reaching the floor",
+             "a floor-length hemline",
+             "a long maxi dress or skirt"]
+  trousers: ["an outfit with trousers or pants",
+             "a model wearing pants",
+             "a trouser-based look"]
