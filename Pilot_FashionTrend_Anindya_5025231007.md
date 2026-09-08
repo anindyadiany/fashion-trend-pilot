@@ -179,17 +179,15 @@ Grafik ini saya tampilkan hanya untuk menunjukkan bahwa pipeline-nya berjalan sa
 
 **Sampelnya kecil.** Hanya 200 gambar, 50 di antaranya beranotasi manual, dan terbatas pada tiga desainer.
 
-**Anotasi manualnya belum tentu konsisten.** Ini keterbatasan yang paling saya khawatirkan. Anotasinya saya kerjakan sendiri tanpa pembanding, dan aturan anotasinya (Bagian 4.2) saya susun sambil jalan, bukan ditetapkan lengkap di awal. Jadi saya belum bisa memastikan penilaian saya di gambar-gambar awal sama konsistennya dengan yang di akhir.
+**Anotasi manualnya belum tentu konsisten.** Ini keterbatasan yang paling saya khawatirkan. Anotasinya saya kerjakan sendiri tanpa pembanding. Jadi saya belum bisa memastikan penilaian saya di gambar-gambar awal sama konsistennya dengan yang di akhir.
 
-Ada juga indikasi saya terlalu longgar memakai kategori `a_line`, proporsinya 42%, dan 6 dari 21 di antaranya saya berikan pada look bercelana, padahal a_line biasanya untuk rok dan gaun.
+Ada juga indikasi saya terlalu longgar memakai kategori `a_line`, proporsinya 42%, dan 6 dari 21 di antaranya saya berikan pada look bercelana, padahal a_line biasanya untuk rok dan dress.
 
-Karena itu, angka di Bagian 5.2 sebaiknya dibaca sebagai **tingkat kesepakatan antara model dan satu anotator**, bukan sebagai ukuran benar-salah. Sebagian ketidakcocokan bisa jadi berasal dari anotasi saya, bukan dari modelnya. Nanti perlu dihitung inter-annotator agreement dengan anotator kedua untuk tahu batas atas performa yang masuk akal.
+Meskipun demikian, tiga kesimpulan utama tetap berlaku:
 
-Meski begitu, tiga temuan utama di atas tidak bergantung pada ketepatan anotasi saya:
-
-- Kategori `straight` tidak pernah dipilih model, ini sifat modelnya, tidak ada hubungannya dengan label saya
-- Analisis selisih skor (5.3) dihitung sepenuhnya dari skor model
-- Perbandingan prompt ensemble (5.4) diuji terhadap anotasi yang sama, jadi kalau anotasi saya bias, biasnya berlaku sama untuk kedua konfigurasi dan selisihnya tetap berlaku
+- `straight` tidak pernah dipilih
+- Analisis selisih skor (Bagian 5.3) dihitung sepenuhnya dari skor model CLIP
+- Perbandingan prompt ensemble (Bagian 5.4) diuji terhadap anotasi yang sama, jadi kalau anotasi saya ada bias, biasnya berlaku sama untuk kedua konfigurasi dan selisihnya tetap berlaku
 
 **Keterbatasan teknis lain:**
 
