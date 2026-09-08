@@ -219,7 +219,7 @@ Selain itu, ada beberapa hal yang saya temukan selama studi ini dan sepertinya b
 
 ---
 
-## Lampiran A — Taksonomi dan Daftar Prompt
+## Lampiran A: Taksonomi dan Daftar Prompt
 
 ```yaml
 silhouette:
@@ -261,7 +261,7 @@ length:
 
 ---
 
-## Lampiran B — Berkas Pendukung
+## Lampiran B: Berkas Pendukung
 
 Notebook lengkap beserta berkas pendukung (manifest 200 sampel, hasil ekstraksi model, anotasi manual 50 gambar, hasil evaluasi):
 
