@@ -263,6 +263,6 @@ length:
 
 ## Lampiran B: Berkas Pendukung
 
-Notebook lengkap beserta berkas pendukung (manifest 200 sampel, hasil ekstraksi model, anotasi manual 50 gambar, hasil evaluasi):
+Notebook lengkap beserta berkas pendukung (manifest 200 sampel, hasil ekstraksi model, anotasi manual 50 gambar, hasil eksperimen prompt ensemble):
 
 https://colab.research.google.com/drive/1VdGrQ-U68XVTCWWEVpefuez5fatl3AsM?usp=sharing
