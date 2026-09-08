@@ -77,6 +77,19 @@ Daftar lengkap prompt ada di Lampiran A.
 
 ## 4. Cara Kerja
 
+| Komponen | Yang dipakai | Keterangan |
+|---|---|---|
+| Dataset | VogueRunway (Internet Archive) | 1.281.633 gambar + metadata |
+| Sumber embedding | `VogueRunway_image.npy` | CLIP ViT-B/32, 512 dimensi, pra-hitung |
+| Model | CLIP ViT-B/32 (OpenAI, via `open_clip`) | Harus sama dengan model pembuat embedding |
+| Metode | Zero-shot, cosine similarity + `argmax` | Dihitung terpisah per kelompok atribut |
+| Teknik prompt | Prompt ensemble, 3 variasi per nilai | Embedding teks dirata-ratakan lalu dinormalisasi |
+| Taksonomi | 2 kelompok × 4 nilai | Siluet dan panjang |
+| Ukuran sampel | 200 gambar | Stratified random per tahun–musim, `random_state=42` |
+| Ground truth | 50 gambar, anotasi manual | Blind: kolom prediksi model dihapus dari file anotasi |
+| Metrik evaluasi | Akurasi, confusion matrix, margin keputusan | Dibandingkan terhadap baseline kelas mayoritas |
+| Environment | Google Colab, Python 3 | `pandas`, `numpy`, `open_clip_torch`, `scikit-learn`, `matplotlib` |
+
 ### 4.1 Ekstraksi atribut
 
 Embedding gambar saya ambil dari file yang sudah tersedia, lalu dinormalisasi. Prompt teksnya saya encode pakai CLIP ViT-B/32, model yang sama dengan yang dipakai membuat embedding tersebut.
